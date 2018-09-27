@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+h1{
+	text-align: center;
+}
+
+div.cadastro{
+	width: 50%;
+	margin: auto;
+	display: block;
+	align-items: center;
+	border-color: black;
+	border-style: solid;
+}
+
+form.cadastro{
+	margin: auto;
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
