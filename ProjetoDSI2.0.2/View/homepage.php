@@ -1,13 +1,3 @@
-<?php
-	require_once("../Controler/class.databaseconnection.inc");
-	$dbObj = new databaseconnection();
-	$dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
-
-	error_log(print_r($_REQUEST));
-	$nomeEmpresa = $_REQUEST['nomeempresa'];
-	$senhaEmpresa = $_REQUEST['senhaempresa'];
-	//$resultSet = ($dbObj->query());
-?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -23,8 +13,8 @@
 	</head>
 	<body>
 		<div class=homepage>
-				
-			</form>
+			<h1>Bem vindo ao Negócio Gente Grande</h1>
+			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php'">Cadastrar representante</button>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,33 @@
+body{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: #021C1E;
+}
+
+h1{
+	text-align: center;
+	color: #6FB98F;
+	font-weight: bold;
+}
+
+div.homepage{
+	width: 50%;
+	margin: auto;
+	display: block;
+	align-items: center;
+	border-color: #6FB98F;
+	border-style: solid;
+	background-color: #004445;
+}
+
+button{
+	width: 25%;
+	margin: auto;
+	display: block;
+	align-items: center;
+	border-color: #6FB98F;
+	border-style: solid;
+	background-color: #004445;
+	color: #6FB98F;
+	font-weight: bold;
+}

@@ -36,6 +36,8 @@ input.cadastro {
 	margin: 5px;
 	width: 250px;
 	background-color: lightgray;
+	color: #2a7c5a;
+	font-weight: bold;
 }
 
 form p {
@@ -52,6 +54,12 @@ form h5{
 select.cadastro{
 	width: 250px;
 	background-color: lightgray;
+	color: #2a7c5a;
+	font-weight: bold;
+}
+
+select option{
+	font-weight: bold;
 }
 
 input.submitCadastro{

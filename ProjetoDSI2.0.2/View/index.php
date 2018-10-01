@@ -26,7 +26,7 @@
 				<input type="password" class="cadastro" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
 				<h5>Por fim, nos diga o ramo em que atua:</h5>
 				<select class="cadastro" id="ramoempresa" name="ramoempresa">
-					<option value="null"></option>
+					<option value="default">Selecione seu ramo:</option>
 					<option value="bebidas">Bebidas</option>
 					<option value="mobiliario">Mobiliário</option>
 					<option value="vestuario">Vestuário</option>
