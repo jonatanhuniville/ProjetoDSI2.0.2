@@ -9,11 +9,8 @@ body{
 h1{
 	text-align: center;
 	color: #6FB98F;
-<<<<<<< HEAD
 	font-weight: bold;
 	margin-bottom: 0px;
-=======
->>>>>>> f190ed4ad6a8a95d92b5a4624c3a06a935131848
 }
 
 div.cadastro{
@@ -27,11 +24,7 @@ div.cadastro{
 }
 
 form.cadastro{
-<<<<<<< HEAD
 	margin: 20px;
-=======
-	margin: 30px;
->>>>>>> f190ed4ad6a8a95d92b5a4624c3a06a935131848
 	align-items: center;
     display: flex;
     justify-content: center;
@@ -40,19 +33,13 @@ form.cadastro{
 }
 
 input.cadastro {
-<<<<<<< HEAD
 	margin: 5px;
 	width: 250px;
 	background-color: lightgray;
-=======
-	margin: 0px;
-	width: 250px;
->>>>>>> f190ed4ad6a8a95d92b5a4624c3a06a935131848
 }
 
 form p {
 	margin: 0px;
-<<<<<<< HEAD
 	font-weight: bold;
 	font-size: 15pt;
 	margin-bottom: 30px;
@@ -71,7 +58,3 @@ input.submitCadastro{
 	margin-top: 35px;
 	background-color: lightgray;
 }
-=======
-}
-
->>>>>>> f190ed4ad6a8a95d92b5a4624c3a06a935131848
