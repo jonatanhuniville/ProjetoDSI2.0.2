@@ -1,3 +1,12 @@
+<!-- https://www.youtube.com/watch?v=V48E_pRlKjE --><!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <html>
 	<head>
 		<title>Negócio Gente Grande</title>
@@ -5,16 +14,17 @@
 	</head>
 	<body>
 		<div class=cadastro>
-			<h1>Cadastre sua Empresa</h1>
-			<form class="cadastro" action="cadastro.php" method="POST"><p>Bem vindo ao cadastro de empresas do Negócio Gente Grande</p>
+			<h1>Bem vindo ao Negócio Gente Grande</h1>
+			<form class="cadastro" action="../Controler/cadastro.php" method="POST">
+				<p>Cadastre sua empresa:</p>
 				</header>
-				<p><h5>Por favor, digite o nome de sua empresa:</h5></p>
+				<h5>Por favor, digite o nome de sua empresa:</h5>
 				<input type="text" class="cadastro" id="nomeempresa" name="nomeempresa">
-				<p><h5>Agora por gentileza, informe o CNPJ (apenas números):</h5></p>
+				<h5>Agora por gentileza, informe o CNPJ (apenas números):</h5>
 				<input type="text" pattern="\d{14}" class="cadastro" id="cnpjempresa" name="cnpjempresa">
-				<p><h5>Escolha uma senha:</h5></p>
-				<input type="password" class="tool" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
-				<p><h5>Por fim, nos diga o ramo em que atua:</h5></p>
+				<h5>Escolha uma senha:</h5>
+				<input type="password" class="cadastro" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
+				<h5>Por fim, nos diga o ramo em que atua:</h5>
 				<select class="cadastro" id="ramoempresa" name="ramoempresa">
 					<option value="null"></option>
 					<option value="bebidas">Bebidas</option>
@@ -31,7 +41,7 @@
 					<option value="educacao">Educação</option>
 					<option value="lazer">Lazer</option>
 				</select>
-				<a><input type="submit" id="botaoCadastro" class="button big scrolly" value="Prosseguir"></a>
+				<a><input type="submit" id="botaoCadastro" class="submitCadastro" value="Prosseguir"></a>
 			</form>
 		</div>
 	</body>

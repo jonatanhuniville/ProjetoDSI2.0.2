@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
+body{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: #021C1E;
+}
+
 h1{
 	text-align: center;
+	color: #6FB98F;
+	font-weight: bold;
+	margin-bottom: 0px;
 }
 
 div.cadastro{
@@ -9,14 +18,43 @@ div.cadastro{
 	margin: auto;
 	display: block;
 	align-items: center;
-	border-color: black;
+	border-color: #6FB98F;
 	border-style: solid;
+	background-color: #004445;
 }
 
 form.cadastro{
-	margin: auto;
+	margin: 20px;
 	align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    color: #6FB98F;
+}
+
+input.cadastro {
+	margin: 5px;
+	width: 250px;
+	background-color: lightgray;
+}
+
+form p {
+	margin: 0px;
+	font-weight: bold;
+	font-size: 15pt;
+	margin-bottom: 30px;
+}
+
+form h5{
+	font-weight: bold;
+}
+
+select.cadastro{
+	width: 250px;
+	background-color: lightgray;
+}
+
+input.submitCadastro{
+	margin-top: 35px;
+	background-color: lightgray;
 }
