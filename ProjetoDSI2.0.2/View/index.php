@@ -22,9 +22,15 @@
 				<input type="text" class="cadastro" id="nomeempresa" name="nomeempresa">
 				<h5>Agora por gentileza, informe o CNPJ (apenas números):</h5>
 				<input type="text" pattern="\d{14}" class="cadastro" id="cnpjempresa" name="cnpjempresa">
+<<<<<<< HEAD
 				<h5>Escolha uma senha:</h5>
 				<input type="password" class="cadastro" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
 				<h5>Por fim, nos diga o ramo em que atua:</h5>
+=======
+				<p><h5>Escolha uma senha:</h5></p>
+				<input type="password" class="cadastro" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
+				<p><h5>Por fim, nos diga o ramo em que atua:</h5></p>
+>>>>>>> f190ed4ad6a8a95d92b5a4624c3a06a935131848
 				<select class="cadastro" id="ramoempresa" name="ramoempresa">
 					<option value="null"></option>
 					<option value="bebidas">Bebidas</option>
