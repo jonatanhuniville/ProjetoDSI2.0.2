@@ -10,21 +10,19 @@
 <html>
 	<head>
 		<title>Negócio Gente Grande</title>
-		<link rel="stylesheet" href="css/cadastroRepresentante.css" />
+		<link rel="stylesheet" href="css/login.css" />
 	</head>
 	<body>
-		<div class=cadastro>
-			<h1>Negócio Gente Grande</h1>
-			<form class="cadastro" action="../Controler/cadastroRepresentante.php" method="POST">
-				<p>Cadastre seu representante:</p>
+		<div class=login>
+			<h1>Bem vindo ao Negócio Gente Grande</h1>
+			<form class="login" action="../Controler/login.php" method="POST">
+				<p>Efetuar login:</p>
 				</header>
-				<h5>Por favor, digite o nome de seu representante:</h5>
-				<input type="text" class="cadastro" id="nomerepresentante" name="nomerepresentante">
-				<h5>Agora por gentileza, informe o CPF (apenas números):</h5>
-				<input type="text" pattern="\d{14}" class="cadastro" id="cpfrepresentante" name="cpfrepresentante">
-				<h5>Escolha uma senha:</h5>
-				<input type="password" class="cadastro" id="senharepresentante" name="senharepresentante" data-tip="Hyper Text Makeup Language" >
-				<a><input type="submit" id="botaoCadastro" class="submitCadastro" value="Prosseguir"></a>
+				<h5>Por favor, digite o nome de sua empresa:</h5>
+				<input type="text" class="login" id="nomeempresa" name="nomeempresa">
+				<h5>Agora informe sua senha:</h5>
+				<input type="password" class="login" id="senhaempresa" name="senhaempresa" data-tip="Hyper Text Makeup Language" >
+				<input type="submit" class="submitLogin" value="Prosseguir">
 			</form>
 		</div>
 	</body>

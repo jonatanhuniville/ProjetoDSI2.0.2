@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<title>Negócio Gente Grande</title>
-		<link rel="stylesheet" href="css/homepage.css" />
+		<link rel="stylesheet" href="css/homepage.css"/>
 	</head>
 	<body>
 		<div class=homepage>

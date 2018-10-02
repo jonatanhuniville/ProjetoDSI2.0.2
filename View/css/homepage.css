@@ -8,10 +8,13 @@ h1{
 	text-align: center;
 	color: #6FB98F;
 	font-weight: bold;
+	margin-top: 80px;
+	margin-bottom: 90px;
 }
 
 div.homepage{
 	width: 50%;
+	height: 80%;
 	margin: auto;
 	display: block;
 	align-items: center;
@@ -21,13 +24,16 @@ div.homepage{
 }
 
 button.homepage{
-	width: 25%;
+	width: 50%;
+	height: 10%; 
 	margin: auto;
-	display: block;
-	align-items: center;
-	border-color: #6FB98F;
-	border-style: solid;
-	background-color: #004445;
-	color: #6FB98F;
-	font-weight: bold;
+	margin-top: 80px;
+	margin-bottom: 40px; 
+	display: block; 
+	align-items: center; 
+	border-color: #6FB98F; 
+	border-style: solid; 
+	background-color: lightgray;; 
+	font-weight: 700;
+	color: #2a7c5a;
 }
