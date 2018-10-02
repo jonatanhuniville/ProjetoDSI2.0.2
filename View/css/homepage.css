@@ -20,7 +20,7 @@ div.homepage{
 	background-color: #004445;
 }
 
-button{
+button.homepage{
 	width: 25%;
 	margin: auto;
 	display: block;

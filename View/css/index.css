@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: #021C1E;
+}
+
+h1{
+	text-align: center;
+	color: #6FB98F;
+	font-weight: bold;
+	margin-top: 80px;
+	margin-bottom: 90px;
+}
+
+div.index{
+	width: 50%;
+	height: 80%;
+	margin: auto;
+	display: block;
+	align-items: center;
+	border-color: #6FB98F;
+	border-style: solid;
+	background-color: #004445;
+}
+
+button.index{
+	width: 50%;
+	height: 10%; 
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 40px; 
+	display: block; 
+	align-items: center; 
+	border-color: #6FB98F; 
+	border-style: solid; 
+	background-color: lightgray;; 
+	font-weight: 700;
+	color: #2a7c5a;
+}

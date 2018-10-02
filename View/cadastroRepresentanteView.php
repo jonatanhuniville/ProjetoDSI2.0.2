@@ -15,7 +15,7 @@
 	<body>
 		<div class=cadastro>
 			<h1>Negócio Gente Grande</h1>
-			<form class="cadastro" action="../Controler/cadastro.php" method="POST">
+			<form class="cadastro" action="../Controler/cadastroRepresentante.php" method="POST">
 				<p>Cadastre seu representante:</p>
 				</header>
 				<h5>Por favor, digite o nome de seu representante:</h5>

@@ -65,4 +65,6 @@ select option{
 input.submitCadastro{
 	margin-top: 35px;
 	background-color: lightgray;
+	font-weight: 700;
+	color: #2a7c5a;
 }
