@@ -1,6 +1,4 @@
 <?php
-	require_once("login.php");
-
 	function validateEmptyField($param){
 		if (empty($param)) {
 			return true;
@@ -18,7 +16,19 @@
 			</script>
 			<?php
 		} else {
-			
+			require_once("class.databaseconnection.inc");
+
+			$dbObj = new databaseconnection();
+			$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
+
+			$sqlQuery = "SELECT * FROM EMPRESA WHERE UPPER(NOMEEMPRESA) = UPPER('$user') AND UPPER(SENHAEMPRESA) = UPPER('$pass')";
+
+			$resultSet = $dbObj->query($sqlQuery);
+			if ($resultSet->num_rows == 1) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	}
 

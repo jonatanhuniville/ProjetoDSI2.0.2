@@ -18,20 +18,20 @@
 	$senhaEmpresa = isset($_REQUEST['senhaempresa']) ? $_REQUEST['senhaempresa'] : null;
 
 	if (empty($nomeEmpresa)) {
-			?>
-				<script type="text/javascript">
-					alert("Favor informe o nome de sua empresa.");
-					window.location.href = "../View/loginView.php";
-				</script>
-			<?php
-		} else if (empty($senhaEmpresa)){
-			?>
-				<script type="text/javascript">
-					alert("Favor informe a senha de sua empresa.");
-					window.location.href = "../View/loginView.php";
-				</script>
-			<?php
-		}
+		?>
+			<script type="text/javascript">
+				alert("Favor informe o nome de sua empresa.");
+				window.location.href = "../View/loginView.php";
+			</script>
+		<?php
+	} else if (empty($senhaEmpresa)){
+		?>
+			<script type="text/javascript">
+				alert("Favor informe a senha de sua empresa.");
+				window.location.href = "../View/loginView.php";
+			</script>
+		<?php
+	}
 
 	$num_rows = login($nomeEmpresa, $senhaEmpresa);
 

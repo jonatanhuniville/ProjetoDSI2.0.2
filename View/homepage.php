@@ -2,7 +2,17 @@
 	require_once("../Controler/generic_functions.php");
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
-	validateLoginToLoggedPages($user, $pass);
+
+	$userLogged = validateLoginToLoggedPages($user, $pass);
+
+	if (!$userLogged) {
+		?>
+		<script type="text/javascript">
+			alert("Você não está logado! Favor efetuar login.");
+			window.location.href = "../View/loginView.php";
+		</script>
+		<?php
+	}
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -19,8 +29,9 @@
 	</head>
 	<body>
 		<div class=homepage>
+			<script type="text/javascript"> nomeEmpresa = '<?=$user;?>'; senhaEmpresa = '<?=$pass;?>';</script>
 			<h1>Bem vindo ao Negócio Gente Grande</h1>
-			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php'">Cadastrar representante</button>
+			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa">Cadastrar representante</button>
 		</div>
 	</body>
 </html>

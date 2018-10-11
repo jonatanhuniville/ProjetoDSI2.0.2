@@ -1,3 +1,19 @@
+<?php
+	require_once("../Controler/generic_functions.php");
+	$user = $_REQUEST['nomeempresa'];
+	$pass = $_REQUEST['senhaempresa'];
+
+	$userLogged = validateLoginToLoggedPages($user, $pass);
+
+	if (!$userLogged) {
+		?>
+		<script type="text/javascript">
+			alert("Você não está logado! Favor efetuar login.");
+			window.location.href = "../View/loginView.php";
+		</script>
+		<?php
+	}
+?>
 <!-- https://www.youtube.com/watch?v=V48E_pRlKjE --><!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -21,7 +37,7 @@
 				<h5>Por favor, digite o nome de seu representante:</h5>
 				<input type="text" class="cadastro" id="nomerepresentante" name="nomerepresentante">
 				<h5>Agora por gentileza, informe o CPF (apenas números):</h5>
-				<input type="text" pattern="\d{14}" class="cadastro" id="cpfrepresentante" name="cpfrepresentante">
+				<input type="text" pattern="\d{11}" class="cadastro" id="cpfrepresentante" name="cpfrepresentante">
 				<h5>Escolha uma senha:</h5>
 				<input type="password" class="cadastro" id="senharepresentante" name="senharepresentante" data-tip="Hyper Text Makeup Language" >
 				<a><input type="submit" id="botaoCadastro" class="submitCadastro" value="Prosseguir"></a>
