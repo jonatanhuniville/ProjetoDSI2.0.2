@@ -5,14 +5,7 @@
 
 	$userLogged = validateLoginToLoggedPages($user, $pass);
 
-	if (!$userLogged) {
-		?>
-		<script type="text/javascript">
-			alert("Você não está logado! Favor efetuar login.");
-			window.location.href = "../View/loginView.php";
-		</script>
-		<?php
-	}
+	
 ?>
 <!-- https://www.youtube.com/watch?v=V48E_pRlKjE --><!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -31,7 +24,7 @@
 	<body>
 		<div class=cadastro>
 			<h1>Negócio Gente Grande</h1>
-			<form class="cadastro" action="../Controler/cadastroRepresentante.php" method="POST">
+			<form class="cadastro" id="formcadastro" method="POST">
 				<p>Cadastre seu representante:</p>
 				</header>
 				<h5>Por favor, digite o nome de seu representante:</h5>
@@ -42,6 +35,11 @@
 				<input type="password" class="cadastro" id="senharepresentante" name="senharepresentante" data-tip="Hyper Text Makeup Language" >
 				<a><input type="submit" id="botaoCadastro" class="submitCadastro" value="Prosseguir"></a>
 			</form>
+			<script type="text/javascript"> 
+				var nomeEmpresa = '<?=$user;?>'; 
+				var senhaEmpresa = '<?=$pass;?>';
+				document.getElementById('formcadastro').action = "../Controler/cadastroRepresentante.php?nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa;
+			</script>
 		</div>
 	</body>
 </html>
