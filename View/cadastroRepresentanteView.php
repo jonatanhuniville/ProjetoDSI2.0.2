@@ -2,7 +2,8 @@
 	require_once("../Controler/generic_functions.php");
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
-
+	$cduser = $_REQUEST['cdempresa'];
+	
 	$userLogged = validateLoginToLoggedPages($user, $pass);
 
 	

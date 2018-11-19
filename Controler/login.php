@@ -16,6 +16,7 @@
 
 	$nomeEmpresa = isset($_REQUEST['nomeempresa']) ? $_REQUEST['nomeempresa'] : null;
 	$senhaEmpresa = isset($_REQUEST['senhaempresa']) ? $_REQUEST['senhaempresa'] : null;
+	$cdempresa = isset($_REQUEST['cdempresa']) ? $_REQUEST['cdempresa'] : null;
 
 	if (empty($nomeEmpresa)) {
 		?>
@@ -41,7 +42,8 @@
 				alert("Login efetuado com sucesso!");
 				nomeEmpresa = '<?=$nomeEmpresa;?>';
 				senhaEmpresa = '<?=$senhaEmpresa;?>';
-				window.location.href = "../View/homepage.php?&nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa;
+				cdempresa = '<?=$cdempresa?>';
+				window.location.href = "../View/homepage.php?&nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa+"&cdempresa="+cdempresa;
 			</script>
 		<?php
 	} else {

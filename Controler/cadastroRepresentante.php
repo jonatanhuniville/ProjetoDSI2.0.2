@@ -10,6 +10,7 @@
 
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
+	$cduser = $_REQUEST['cdempresa'];
 	$redirect;
 
 	if (empty($nomerepresentante)) {
@@ -19,7 +20,7 @@
 	} else if (empty($cpfrepresentante)){
 		$redirect = true;
 	} else {
-		$sqlQuery = "INSERT INTO REPRESENTANTE (NOMEREPRESENTANTE, SENHAREPRESENTANTE, CPFREPRESENTANTE) VALUES ('$nomerepresentante', '$senharepresentante', '$cpfrepresentante')";
+		$sqlQuery = "INSERT INTO REPRESENTANTE (CDEMPRESA, NOMEREPRESENTANTE, SENHAREPRESENTANTE, CPFREPRESENTANTE) VALUES (".$cduser.", '$nomerepresentante', '$senharepresentante', '$cpfrepresentante')";
 		$resultSet = $dbObj->query($sqlQuery);
 		$redirect = false;
 	}

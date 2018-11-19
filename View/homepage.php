@@ -2,6 +2,7 @@
 	require_once("../Controler/generic_functions.php");
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
+	$cdempresa = $_REQUEST['cdempresa'];
 
 	$userLogged = validateLoginToLoggedPages($user, $pass);
 
@@ -29,9 +30,12 @@
 	</head>
 	<body>
 		<div class=homepage>
-			<script type="text/javascript"> nomeEmpresa = '<?=$user;?>'; senhaEmpresa = '<?=$pass;?>';</script>
+			<script type="text/javascript"> nomeEmpresa = '<?=$user;?>'; senhaEmpresa = '<?=$pass;?>'; cdempresa = '<?=$cdempresa?>'</script>
 			<h1>Bem vindo ao Negócio Gente Grande</h1>
-			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa">Cadastrar representante</button>
+			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa">Cadastrar representante</button>
+		</div>
+		<div>
+			
 		</div>
 	</body>
 </html>
