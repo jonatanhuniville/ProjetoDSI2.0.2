@@ -14,25 +14,10 @@
 
 	if (empty($nomerepresentante)) {
 		$redirect = true;
-		?>
-			<script type="text/javascript">
-				alert("Favor informe o nome de seu representante.");
-			</script>
-		<?php
 	} else if (empty($senharepresentante)){
 		$redirect = true;
-		?>
-			<script type="text/javascript">
-				alert("Favor informe a senha de seu representante.");
-			</script>
-		<?php
 	} else if (empty($cpfrepresentante)){
 		$redirect = true;
-		?>
-			<script type="text/javascript">
-				alert("Favor informe o CPF de seu representante.");
-			</script>
-		<?php
 	} else {
 		$sqlQuery = "INSERT INTO REPRESENTANTE (NOMEREPRESENTANTE, SENHAREPRESENTANTE, CPFREPRESENTANTE) VALUES ('$nomerepresentante', '$senharepresentante', '$cpfrepresentante')";
 		$resultSet = $dbObj->query($sqlQuery);
@@ -40,15 +25,18 @@
 	}
 
 	if ($redirect) {
-		echo "<script type='text/javascript'>alert('Faltam informar dados, favor rever o cadastro.');</script>";
-		header("Location: ../View/cadastroRepresentanteView.php?nomeempresa=".$user."&senhaempresa=".$pass);
+		echo "<script type='text/javascript'>
+				alert('Faltam informar dados, favor rever o cadastro.');
+				window.location.href(window.history.back());
+			</script>";
 	}
 ?>
 <script type="text/javascript">
 	var results = "<?=$resultSet?>";
-	alert(results);
 	alert("Representante cadastrado com sucesso!");
-	//window.location.href = "../View/homepage.php?";
+	var user = "<?=$user?>";
+	var pass = "<?=$pass?>";
+	window.location.href = "../View/homepage.php?nomeempresa="+user+"&senhaempresa="+pass;
 </script>
 
 	
