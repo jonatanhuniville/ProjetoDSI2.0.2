@@ -7,7 +7,7 @@
 	$cnpjEmpresa = isset($_REQUEST['cnpjempresa']) ? $_REQUEST['cnpjempresa'] : null;
 
 	$dbObj = new databaseconnection();
-	$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
+	$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
 
 	if (empty($nomeEmpresa)) {
 		?>

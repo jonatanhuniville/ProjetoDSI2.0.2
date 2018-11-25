@@ -2,7 +2,7 @@
 	require_once("../Controler/generic_functions.php");
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
-	$cdempresa = $_REQUEST['cdempresa'];
+	$cdempresa = isset($_REQUEST['cdempresa']) ? $_REQUEST['cdempresa'] : null;
 
 	$userLogged = validateLoginToLoggedPages($user, $pass);
 
@@ -14,6 +14,10 @@
 		</script>
 		<?php
 	}
+
+	$representantes = returnRepresentantes($cdempresa);
+	error_log(print_r($representantes));
+	die();
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -30,12 +34,21 @@
 	</head>
 	<body>
 		<div class=homepage>
-			<script type="text/javascript"> nomeEmpresa = '<?=$user;?>'; senhaEmpresa = '<?=$pass;?>'; cdempresa = '<?=$cdempresa?>'</script>
+			<script type="text/javascript">
+				nomeEmpresa = '<?=$user;?>';
+				senhaEmpresa = '<?=$pass;?>';
+				cdempresa = '<?=$cdempresa?>'
+			</script>
 			<h1>Bem vindo ao Negócio Gente Grande</h1>
 			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa">Cadastrar representante</button>
-		</div>
-		<div>
-			
+			<div>
+				<script>
+					function getRepresentantes()
+					{
+
+					}
+				</script>	
+			</div>		
 		</div>
 	</body>
 </html>

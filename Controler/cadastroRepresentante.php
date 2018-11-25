@@ -6,11 +6,11 @@
 	$cpfrepresentante = isset($_REQUEST['cpfrepresentante']) ? $_REQUEST['cpfrepresentante'] : null;
 
 	$dbObj = new databaseconnection();
-	$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
+	$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
 
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
-	$cduser = $_REQUEST['cdempresa'];
+	$cdempresa = $_REQUEST['cdempresa'];
 	$redirect;
 
 	if (empty($nomerepresentante)) {
@@ -20,7 +20,7 @@
 	} else if (empty($cpfrepresentante)){
 		$redirect = true;
 	} else {
-		$sqlQuery = "INSERT INTO REPRESENTANTE (CDEMPRESA, NOMEREPRESENTANTE, SENHAREPRESENTANTE, CPFREPRESENTANTE) VALUES (".$cduser.", '$nomerepresentante', '$senharepresentante', '$cpfrepresentante')";
+		$sqlQuery = "INSERT INTO REPRESENTANTE (CDEMPRESA, NOMEREPRESENTANTE, SENHAREPRESENTANTE, CPFREPRESENTANTE) VALUES (".$cdempresa.", '$nomerepresentante', '$senharepresentante', '$cpfrepresentante')";
 		$resultSet = $dbObj->query($sqlQuery);
 		$redirect = false;
 	}
@@ -37,10 +37,6 @@
 	alert("Representante cadastrado com sucesso!");
 	var user = "<?=$user?>";
 	var pass = "<?=$pass?>";
-	window.location.href = "../View/homepage.php?nomeempresa="+user+"&senhaempresa="+pass;
+	var cdempresa = "<?=$cdempresa?>";
+	window.location.href = "../View/homepage.php?nomeempresa="+user+"&senhaempresa="+pass+"&cdempresa="+cdempresa;
 </script>
-
-	
-<!--	if (isset($resultSet) && $resultSet == 1) {-->
-
-

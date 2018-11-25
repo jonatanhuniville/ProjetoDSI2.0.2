@@ -6,17 +6,17 @@
 		global $resultSet;
 
 		$dbObj = new databaseconnection();
-		$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
+		$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
 
 		$sqlQuery = "SELECT * FROM EMPRESA WHERE UPPER(NOMEEMPRESA) = UPPER('$login') AND UPPER(SENHAEMPRESA) = UPPER('$pass')";
 
 		$resultSet = $dbObj->query($sqlQuery);
-		return $validation = $resultSet->num_rows;
+		return $validation = array("resultset" => $resultSet->num_rows, "cdempresa" => $resultSet->fetch_object()->CDEMPRESA);
 	}
 
 	$nomeEmpresa = isset($_REQUEST['nomeempresa']) ? $_REQUEST['nomeempresa'] : null;
 	$senhaEmpresa = isset($_REQUEST['senhaempresa']) ? $_REQUEST['senhaempresa'] : null;
-	$cdempresa = isset($_REQUEST['cdempresa']) ? $_REQUEST['cdempresa'] : null;
+	$cdempresa = login($nomeEmpresa, $senhaEmpresa);
 
 	if (empty($nomeEmpresa)) {
 		?>
@@ -36,13 +36,13 @@
 
 	$num_rows = login($nomeEmpresa, $senhaEmpresa);
 
-	if ($num_rows == 1) {
+	if ($num_rows["resultset"] == 1) {
 		?>
 			<script type="text/javascript">
 				alert("Login efetuado com sucesso!");
 				nomeEmpresa = '<?=$nomeEmpresa;?>';
 				senhaEmpresa = '<?=$senhaEmpresa;?>';
-				cdempresa = '<?=$cdempresa?>';
+				cdempresa = '<?=$cdempresa["cdempresa"]?>';
 				window.location.href = "../View/homepage.php?&nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa+"&cdempresa="+cdempresa;
 			</script>
 		<?php

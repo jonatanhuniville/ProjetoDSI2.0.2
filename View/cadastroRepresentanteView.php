@@ -2,11 +2,9 @@
 	require_once("../Controler/generic_functions.php");
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];
-	$cduser = $_REQUEST['cdempresa'];
-	
-	$userLogged = validateLoginToLoggedPages($user, $pass);
+	$cdempresa = $_REQUEST['cdempresa'];
 
-	
+	$userLogged = validateLoginToLoggedPages($user, $pass);	
 ?>
 <!-- https://www.youtube.com/watch?v=V48E_pRlKjE --><!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -39,7 +37,8 @@
 			<script type="text/javascript"> 
 				var nomeEmpresa = '<?=$user;?>'; 
 				var senhaEmpresa = '<?=$pass;?>';
-				document.getElementById('formcadastro').action = "../Controler/cadastroRepresentante.php?nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa;
+				var cdempresa = '<?=$cdempresa?>';
+				document.getElementById('formcadastro').action = "../Controler/cadastroRepresentante.php?nomeempresa="+nomeEmpresa+"&senhaempresa="+senhaEmpresa+"&cdempresa="+cdempresa;
 			</script>
 		</div>
 	</body>

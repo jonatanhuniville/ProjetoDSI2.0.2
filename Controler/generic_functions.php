@@ -1,5 +1,6 @@
 <?php
-	function validateEmptyField($param){
+	function validateEmptyField($param)
+	{
 		if (empty($param)) {
 			return true;
 		} else {
@@ -7,7 +8,8 @@
 		}
 	}
 
-	function validateLoginToLoggedPages($user, $pass){
+	function validateLoginToLoggedPages($user, $pass)
+	{
 		if ($user == null || $pass == null) {
 			?>
 			<script type="text/javascript">
@@ -19,7 +21,7 @@
 			require_once("class.databaseconnection.inc");
 
 			$dbObj = new databaseconnection();
-			$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
+			$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
 
 			$sqlQuery = "SELECT * FROM EMPRESA WHERE UPPER(NOMEEMPRESA) = UPPER('$user') AND UPPER(SENHAEMPRESA) = UPPER('$pass')";
 
@@ -32,11 +34,30 @@
 		}
 	}
 
-	function validateLoginToCommonPages($user, $pass){
+	function validateLoginToCommonPages($user, $pass)
+	{
 		if ($user == null || $pass == null) {
 			
 		} else {
 
+		}
+	}
+
+	function returnRepresentantes($cdempresa)
+	{
+		require_once("class.databaseconnection.inc");
+
+		$dbObj = new databaseconnection();
+		$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
+
+		$sqlQuery = "SELECT * FROM REPRESENTANTE WHERE CDREPRESENTANTE = ".$cdempresa;
+
+		$resultSet = $dbObj->query($sqlQuery);
+
+		if ($resultSet->num_rows >= 1) {
+			return $resultSet->fetch_array();
+		} else {
+			return false;
 		}
 	}
 ?>
