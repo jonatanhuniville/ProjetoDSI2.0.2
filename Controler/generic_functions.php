@@ -50,12 +50,12 @@
 		$dbObj = new databaseconnection();
 		$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
 
-		$sqlQuery = "SELECT * FROM REPRESENTANTE WHERE CDREPRESENTANTE = ".$cdempresa;
+		$sqlQuery = "SELECT * FROM REPRESENTANTE WHERE CDEMPRESA = ".$cdempresa;
 
 		$resultSet = $dbObj->query($sqlQuery);
 
 		if ($resultSet->num_rows >= 1) {
-			return $resultSet->fetch_array();
+			return $resultSet->fetch_all();
 		} else {
 			return false;
 		}

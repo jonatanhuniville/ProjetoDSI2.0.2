@@ -16,8 +16,16 @@
 	}
 
 	$representantes = returnRepresentantes($cdempresa);
-	error_log(print_r($representantes));
-	die();
+	if (!empty($representantes)) {
+		$representantesCount = count($representantes);
+		$count = 0;
+		while ($count < $representantesCount) {
+			$representantes[] = $representantes[$count];
+			$count ++;
+		}
+	} else {
+		$representantesCds = array();
+	}
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -41,11 +49,12 @@
 			</script>
 			<h1>Bem vindo ao Negócio Gente Grande</h1>
 			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa">Cadastrar representante</button>
+			<button type="button" class="homepage" onclick="openItemCadastro()">Cadastrar Item</button>
 			<div>
 				<script>
-					function getRepresentantes()
+					function openItemCadastro()
 					{
-
+						window.open('cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa, "", "width=650,height=500,left=325,top=200");
 					}
 				</script>	
 			</div>		
