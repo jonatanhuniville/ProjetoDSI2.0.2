@@ -21,7 +21,7 @@
 			require_once("class.databaseconnection.inc");
 
 			$dbObj = new databaseconnection();
-			$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
+			$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
 
 			$sqlQuery = "SELECT * FROM EMPRESA WHERE UPPER(NOMEEMPRESA) = UPPER('$user') AND UPPER(SENHAEMPRESA) = UPPER('$pass')";
 
@@ -48,7 +48,7 @@
 		require_once("class.databaseconnection.inc");
 
 		$dbObj = new databaseconnection();
-		$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
+		$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
 
 		$sqlQuery = "SELECT * FROM REPRESENTANTE WHERE CDEMPRESA = ".$cdempresa;
 

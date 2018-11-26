@@ -6,7 +6,7 @@
 	$cpfrepresentante = isset($_REQUEST['cpfrepresentante']) ? $_REQUEST['cpfrepresentante'] : null;
 
 	$dbObj = new databaseconnection();
-	$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
+	$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
 
 	$user = $_REQUEST['nomeempresa'];
 	$pass = $_REQUEST['senhaempresa'];

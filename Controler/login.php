@@ -6,12 +6,12 @@
 		global $resultSet;
 
 		$dbObj = new databaseconnection();
-		$dbObj = $dbObj->connectDatabase("localhost", "root", "", "PROJETODSI202");
+		$dbObj = $dbObj->connectDatabase("localhost", "root", "univille", "PROJETODSI202");
 
 		$sqlQuery = "SELECT * FROM EMPRESA WHERE UPPER(NOMEEMPRESA) = UPPER('$login') AND UPPER(SENHAEMPRESA) = UPPER('$pass')";
 
 		$resultSet = $dbObj->query($sqlQuery);
-		return $validation = array("resultset" => $resultSet->num_rows, "cdempresa" => $resultSet->fetch_object()->CDEMPRESA);
+		return $validation = array("resultset" => $resultSet->fetch_object()->CDEMPRESA, "cdempresa" => $resultSet->num_rows);
 	}
 
 	$nomeEmpresa = isset($_REQUEST['nomeempresa']) ? $_REQUEST['nomeempresa'] : null;

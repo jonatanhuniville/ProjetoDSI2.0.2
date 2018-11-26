@@ -28,4 +28,12 @@ SELECT * FROM REPRESENTANTE;
 TRUNCATE TABLE REPRESENTANTE;
 
 
+ALTER USER user
+  IDENTIFIED WITH caching_sha2_password
+  BY 'univille';
+  
+  ALTER USER 'root'@'localhost'
+  IDENTIFIED WITH mysql_native_password
+  BY 'univille';
+
 
