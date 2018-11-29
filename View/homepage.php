@@ -49,12 +49,12 @@
 			</script>
 			<h1>Bem vindo ao Negócio Gente Grande</h1>
 			<button type="button" class="homepage" onclick="window.location.href='cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa">Cadastrar representante</button>
-			<button type="button" class="homepage" onclick="openItemCadastro()">Cadastrar Item</button>
+			<button type="button" class="homepage" onclick="openProdutoCadastro()">Cadastrar Produto</button>
 			<div>
 				<script>
-					function openItemCadastro()
+					function openProdutoCadastro()
 					{
-						window.open('cadastroRepresentanteView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa, "", "width=650,height=500,left=325,top=200");
+						window.open('cadastroProdutoView.php?&nomeempresa='+nomeEmpresa+'&senhaempresa='+senhaEmpresa+'&cdempresa='+cdempresa, "", "width=650,height=600,left=620,top=180");
 					}
 				</script>	
 			</div>		
